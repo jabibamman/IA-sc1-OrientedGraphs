@@ -40,11 +40,11 @@ class Graph :
                     adjacency_list[i].append(j)
         return adjacency_list
 
-    def floydWarshall(self, matrix) :
+    def floydWarshall(self, matrix):
         dist = matrix
-        for k in range(len(matrix)) :
-            for i in range(len(matrix)) :
-                for j in range(len(matrix)) :
+        for k in range(len(matrix)):
+            for i in range(len(matrix)):
+                for j in range(len(matrix)):
                     dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j])
         return dist
 
